@@ -1,0 +1,6 @@
+E:\ASPIRE\ADO.net_Sample\ADO.net_Sample\bin\Debug\ADO.net_Sample.exe.config
+E:\ASPIRE\ADO.net_Sample\ADO.net_Sample\bin\Debug\ADO.net_Sample.exe
+E:\ASPIRE\ADO.net_Sample\ADO.net_Sample\bin\Debug\ADO.net_Sample.pdb
+E:\ASPIRE\ADO.net_Sample\ADO.net_Sample\obj\Debug\ADO.net_Sample.exe
+E:\ASPIRE\ADO.net_Sample\ADO.net_Sample\obj\Debug\ADO.net_Sample.pdb
+E:\ASPIRE\ADO.net_Sample\ADO.net_Sample\obj\Debug\ADO.net_Sample.csprojResolveAssemblyReference.cache
