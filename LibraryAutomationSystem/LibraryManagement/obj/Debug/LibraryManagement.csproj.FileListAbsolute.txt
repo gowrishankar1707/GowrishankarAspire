@@ -1,0 +1,6 @@
+E:\ASPIRE\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe.config
+E:\ASPIRE\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe
+E:\ASPIRE\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.pdb
+E:\ASPIRE\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.exe
+E:\ASPIRE\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
+E:\ASPIRE\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csprojResolveAssemblyReference.cache
