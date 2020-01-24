@@ -15,19 +15,16 @@ namespace LibraryManagement
      internal string adminName;
          internal string adminPassword;
          internal string adminId;
-        internal string adminPhoneNumber;
+       
 
-          internal string adminEmail;
-        internal string adminPost;
       
-       public Admin(string Name,string id,string password, string PhoneNumber, string Email,string role)
+       public Admin( string id,string Name,string password)
         {
             adminName = Name;
             adminPassword = password;
             adminId = id;
-            adminPhoneNumber = PhoneNumber;
-            adminEmail = Email;
-            adminPost = role;
+           
+           
         }
 
         public Admin()
@@ -37,10 +34,9 @@ namespace LibraryManagement
         public   void Display()
         {
             Console.WriteLine(adminName);
-            Console.WriteLine(adminPhoneNumber);
-            Console.WriteLine(adminEmail);
-            Console.WriteLine(adminPost);
-
+            Console.WriteLine(adminId);
+         
+         
         }
        
        

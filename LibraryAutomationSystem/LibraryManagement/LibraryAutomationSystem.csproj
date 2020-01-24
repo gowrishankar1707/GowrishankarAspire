@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Admin\Admin.cs" />
     <Compile Include="Admin\AdminChoice.cs" />
+    <Compile Include="AdminSqlConnection.cs" />
     <Compile Include="Validation\ErrorMessage.cs" />
     <Compile Include="Member\MemberInput.cs" />
     <Compile Include="UserChoice\Home.cs" />

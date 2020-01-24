@@ -8,6 +8,8 @@
 
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 
 
 namespace LibraryManagement
@@ -18,13 +20,7 @@ namespace LibraryManagement
         internal static Dictionary<string, Member> userDictionary = new Dictionary<string, Member>();
 
         internal static Dictionary<string, Admin> adminDictionary = new Dictionary<string, Admin>();
-        public void AddAdmin()
-        {
-            Admin admin = new Admin("Gowri", "A1", "Gowri", "9487758805", "gowrishankar@gmail.com", "admin");
-            adminDictionary.Add(admin.adminId, admin);
-
-        }
-
+       
         public void SignUp()
         {
             Console.WriteLine("Enter the role:member");
@@ -55,9 +51,9 @@ namespace LibraryManagement
                     Console.WriteLine("yoou are new you cannot allow to log in");
                 }
                 foreach (var loginMember in userDictionary.Values)
-                //member checking
+                    //member checking
                 {
-                    if ((loginMember.memberID == id) && (loginMember.memberPassword == password))
+                    if  (loginMember.memberPassword == password)
                     {
                         Console.WriteLine("Name: " + loginMember.memberName);
                         Console.WriteLine("password: " + loginMember.memberPassword);
@@ -94,32 +90,63 @@ namespace LibraryManagement
 
             if (role == "admin")
             {
-                AddAdmin();
-                bool Bool = true;
-                do
-                {
-                    foreach (var loginAdmin in adminDictionary.Values)
-                    //admin checking
+   
+                //bool Bool = true;
+                //do
+                //{
+                    SqlConnection s=   AdminSqlConnections.AdminDB();
+                    s.Open();
+                    SqlCommand cmd = new SqlCommand("Select * FROM Admin", s);
+                    SqlDataAdapter adap = new SqlDataAdapter();
+                    adap.SelectCommand = cmd;
+                    DataSet set = new DataSet();
+                    adap.Fill(set,"Admin");
+                    DataTable table = set.Tables["Admin"];
+                    foreach(DataRow row in table.Rows)
                     {
-                        if ((loginAdmin.adminId == id) && (loginAdmin.adminPassword == password))
-                        {
-                            AdminChoice adminChoice = new AdminChoice();
-                            adminChoice.GetOption();
-                            Bool = false;
+                    Console.WriteLine("hi");
+                        Admin admin = new Admin(row[0].ToString(), row[1].ToString(),row[2].ToString());
+                        adminDictionary.Add(admin.adminId, admin);
+                        
 
+                    }
+                   
+
+                    foreach (Admin admin in adminDictionary.Values)
+                    {
+                        if ((admin.adminId == id) && (admin.adminPassword == password))
+                        {
+                            Console.WriteLine("Login sucessfully");
                         }
                         else
                         {
-                            Bool = true;
-                            Console.WriteLine("Do you want to continue");
-                            bool myBool = (Console.ReadLine() == "yes");
-                            if (myBool)
-                            {
-                                Login();
-                            }
+                            Console.WriteLine("not login");
                         }
                     }
-                } while (Bool);
+
+
+                    //foreach (var loginAdmin in adminDictionary.Values)
+                    ////admin checking
+                    //{
+                    //    if ((loginAdmin.adminId == id) && (loginAdmin.adminPassword == password))
+                    //    {
+                    //        AdminChoice adminChoice = new AdminChoice();
+                    //        adminChoice.GetOption();
+                    //        Bool = false;
+
+                    //    }
+                    //    else
+                    //    {
+                    //        Bool = true;
+                    //        Console.WriteLine("Do you want to continue");
+                    //        bool myBool = (Console.ReadLine() == "yes");
+                    //        if (myBool)
+                    //        {
+                    //            Login();
+                    //        }
+                    //    }
+                //    //}
+                //} while (Bool);
                 
             }
             if ((role != "admin") && (role != "member"))

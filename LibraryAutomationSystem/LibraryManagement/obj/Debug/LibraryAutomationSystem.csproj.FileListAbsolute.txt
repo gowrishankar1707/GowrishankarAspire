@@ -9,3 +9,4 @@ E:\ASPIRE\LibraryAutomationSystem\LibraryManagement\obj\Debug\LibraryManagement.
 E:\ASPIRE\LibraryAutomationSystem\LibraryManagement\obj\Debug\LibraryManagement.pdb
 E:\ASPIRE\LibraryAutomationSystem\LibraryManagement\bin\Debug\LibraryManagement.exe
 E:\ASPIRE\LibraryAutomationSystem\LibraryManagement\bin\Debug\LibraryManagement.pdb
+E:\ASPIRE\LibraryAutomationSystem\LibraryManagement\obj\Debug\LibraryAutomationSystem.csprojResolveAssemblyReference.cache
